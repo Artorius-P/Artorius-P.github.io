@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>数据结构及算法复习笔记 | Artorius.net</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/logo2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <meta name="description" content="无何有之乡">
+    
+    <link rel="preload" href="/assets/css/0.styles.a36f3eb3.css" as="style"><link rel="preload" href="/assets/js/app.e3534515.js" as="script"><link rel="preload" href="/assets/js/2.4aad4811.js" as="script"><link rel="preload" href="/assets/js/21.91e151c9.js" as="script"><link rel="prefetch" href="/assets/js/10.89f89377.js"><link rel="prefetch" href="/assets/js/11.21c49e1b.js"><link rel="prefetch" href="/assets/js/12.800ddd9c.js"><link rel="prefetch" href="/assets/js/13.ff12135d.js"><link rel="prefetch" href="/assets/js/14.11ba79f7.js"><link rel="prefetch" href="/assets/js/15.0f377d30.js"><link rel="prefetch" href="/assets/js/16.a6100f73.js"><link rel="prefetch" href="/assets/js/17.17906240.js"><link rel="prefetch" href="/assets/js/18.4f42ffd4.js"><link rel="prefetch" href="/assets/js/19.f9b56f93.js"><link rel="prefetch" href="/assets/js/20.2f503182.js"><link rel="prefetch" href="/assets/js/22.53041215.js"><link rel="prefetch" href="/assets/js/23.d91991ea.js"><link rel="prefetch" href="/assets/js/24.4a8b5477.js"><link rel="prefetch" href="/assets/js/25.25466f91.js"><link rel="prefetch" href="/assets/js/3.d25e7a78.js"><link rel="prefetch" href="/assets/js/4.cbcde4b4.js"><link rel="prefetch" href="/assets/js/5.014d757b.js"><link rel="prefetch" href="/assets/js/6.c61b8af2.js"><link rel="prefetch" href="/assets/js/7.980ea9fd.js"><link rel="prefetch" href="/assets/js/8.d135c6a8.js"><link rel="prefetch" href="/assets/js/9.b6d72e6a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a36f3eb3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo2.png" alt="Artorius.net" class="logo"> <span class="site-name can-hide">Artorius.net</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/study/index.html" class="nav-link">
+  学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/daily/index.html" class="nav-link">
+  折腾日常
+</a></li><li class="dropdown-item"><!----> <a href="/pages/life/index.html" class="nav-link">
+  生活随想
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/artorius-p" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/study/index.html" class="nav-link">
+  学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/daily/index.html" class="nav-link">
+  折腾日常
+</a></li><li class="dropdown-item"><!----> <a href="/pages/life/index.html" class="nav-link">
+  生活随想
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/artorius-p" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>数据结构及算法复习笔记</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/study/2020-07-10-1.html#排序算法" class="sidebar-link">排序算法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/study/2020-07-10-1.html#_1-归并排序" class="sidebar-link">1. 归并排序</a></li><li class="sidebar-sub-header"><a href="/pages/study/2020-07-10-1.html#_2-快速排序" class="sidebar-link">2. 快速排序</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="数据结构及算法复习笔记"><a href="#数据结构及算法复习笔记" class="header-anchor">#</a> 数据结构及算法复习笔记</h1> <h2 id="排序算法"><a href="#排序算法" class="header-anchor">#</a> 排序算法</h2> <h3 id="_1-归并排序"><a href="#_1-归并排序" class="header-anchor">#</a> 1. 归并排序</h3> <p>归并排序比较简单，写代码的时候最需要注意的就是搞清楚数组的边界。</p> <div class="language-c++ extra-class"><pre class="language-text"><code>#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+
+using namespace std;
+
+void merge(int A[], int start, int mid, int end) {
+    int n1 = mid - start + 1;
+    int n2 = end - mid;
+    int L[n1 + 1] = {0}, R[n2 + 1] = {0};
+    int i, j;
+    for (i = 0; i &lt; n1; i++)
+        L[i] = A[start + i];
+    for (j = 0; j &lt; n2; j++)
+        R[j] = A[mid + j + 1];
+    L[n1] = 0x3FFFFFFF;
+    R[n2] = 0x3FFFFFFF;
+    i = 0;
+    j = 0;
+    for (int k = start; k &lt;= end; k++) {
+        if (L[i] &lt;= R[j]) {
+            A[k] = L[i];
+            i++;
+        }
+        else { 
+            A[k] = R[j];
+            j++;
+        }
+    }
+}
+
+void mergeSort(int A[], int start, int end) {
+    if (start &lt; end) {
+        int mid;
+        mid = floor((float)(start+end)/2.0);
+        mergeSort(A, start, mid);
+        mergeSort(A, mid+1, end);
+        merge(A, start, mid, end);
+    } 
+}
+
+int main() {
+    int A[10] = {1, 4, 7, 2, 5, 8, 0, 3, 6, 9};
+    mergeSort(A, 0, 9);
+    for(int i = 0; i &lt; 10; i++)
+        cout &lt;&lt; A[i] &lt;&lt; &quot; &quot;;
+    cout &lt;&lt; endl;
+    return 0;
+
+}
+</code></pre></div><h3 id="_2-快速排序"><a href="#_2-快速排序" class="header-anchor">#</a> 2. 快速排序</h3> <p>最坏情况：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi><mo>(</mo><mi>n</mi><mo>)</mo><mo>=</mo><mi mathvariant="normal">Θ</mi><mo>(</mo><msup><mi>n</mi><mn>2</mn></msup><mo>)</mo></mrow><annotation encoding="application/x-tex">T(n)=\Theta(n^2)</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathrm">Θ</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">n</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mclose">)</span></span></span></span></p> <p>平均情况：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>T</mi><mo>(</mo><mi>n</mi><mo>)</mo><mo>=</mo><mi>O</mi><mo>(</mo><mi>n</mi><mi>lg</mi><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">T(n)=O(n\lg n)</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathit">n</span><span class="mop">l<span style="margin-right:0.01389em;">g</span></span><span class="mord mathit">n</span><span class="mclose">)</span></span></span></span></p> <div class="language-c++ extra-class"><pre class="language-text"><code>#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+int partition(int A[], int start, int end) {
+    int x = A[end];
+    int i = start - 1;
+    for (int j = start; j &lt; end; j++) {
+        if (A[j] &lt;= x) {
+            i++;
+            swap(A[i], A[j]);
+        }
+    }
+    swap(A[i+1], A[end]);
+    return (i + 1);
+}
+
+
+void quickSort(int A[], int start, int end) {
+    if (start &lt; end) {
+        int mid = partition(A, start, end);
+        quickSort(A, start, mid-1);
+        quickSort(A, mid+1, end);
+    }
+}
+
+int main() {
+    int A[10] = {1, 4, 7, 2, 5, 8, 0, 3, 6, 9};
+    quickSort(A, 0, 9);
+    for (int i = 0; i &lt; 10; i++)
+        cout &lt;&lt; A[i] &lt;&lt; &quot; &quot;;
+    cout &lt;&lt; endl;
+    return 0;
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新:</span> <span class="time">2020-07-14</span></div></footer> <!----> </main></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.e3534515.js" defer></script><script src="/assets/js/2.4aad4811.js" defer></script><script src="/assets/js/21.91e151c9.js" defer></script>
+  </body>
+</html>
