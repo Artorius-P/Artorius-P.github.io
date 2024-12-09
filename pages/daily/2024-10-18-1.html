@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>使用uv管理Python环境 | Artorius.net</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/logo2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <meta name="description" content="无何有之乡">
+    
+    <link rel="preload" href="/assets/css/0.styles.c95c5933.css" as="style"><link rel="preload" href="/assets/js/app.7b9cba93.js" as="script"><link rel="preload" href="/assets/js/2.80ae757c.js" as="script"><link rel="preload" href="/assets/js/1.0ebbda27.js" as="script"><link rel="preload" href="/assets/js/36.51e65fc8.js" as="script"><link rel="prefetch" href="/assets/js/10.0941021d.js"><link rel="prefetch" href="/assets/js/11.96446f63.js"><link rel="prefetch" href="/assets/js/12.ac1a7e0c.js"><link rel="prefetch" href="/assets/js/13.1f477add.js"><link rel="prefetch" href="/assets/js/14.c2b86026.js"><link rel="prefetch" href="/assets/js/15.9defefcc.js"><link rel="prefetch" href="/assets/js/16.992d7097.js"><link rel="prefetch" href="/assets/js/17.8a453619.js"><link rel="prefetch" href="/assets/js/18.5909d46b.js"><link rel="prefetch" href="/assets/js/19.d1f46973.js"><link rel="prefetch" href="/assets/js/20.15c7edc0.js"><link rel="prefetch" href="/assets/js/21.4eb1648a.js"><link rel="prefetch" href="/assets/js/22.7ec55825.js"><link rel="prefetch" href="/assets/js/23.e48c2bf2.js"><link rel="prefetch" href="/assets/js/24.fa9027fc.js"><link rel="prefetch" href="/assets/js/25.353a388f.js"><link rel="prefetch" href="/assets/js/26.fb797919.js"><link rel="prefetch" href="/assets/js/27.87ef4714.js"><link rel="prefetch" href="/assets/js/28.163c8674.js"><link rel="prefetch" href="/assets/js/29.370c47bc.js"><link rel="prefetch" href="/assets/js/3.da4f66ab.js"><link rel="prefetch" href="/assets/js/30.9c6b2102.js"><link rel="prefetch" href="/assets/js/31.9bdf4d3b.js"><link rel="prefetch" href="/assets/js/32.3cf1f577.js"><link rel="prefetch" href="/assets/js/33.d2e540d2.js"><link rel="prefetch" href="/assets/js/34.e3e32d2b.js"><link rel="prefetch" href="/assets/js/35.8041ed3e.js"><link rel="prefetch" href="/assets/js/37.dc3d2eea.js"><link rel="prefetch" href="/assets/js/38.d6c470a5.js"><link rel="prefetch" href="/assets/js/39.a22dcaff.js"><link rel="prefetch" href="/assets/js/4.0a10bbcd.js"><link rel="prefetch" href="/assets/js/40.b2cfe1a0.js"><link rel="prefetch" href="/assets/js/41.e4cedd50.js"><link rel="prefetch" href="/assets/js/42.c58547c6.js"><link rel="prefetch" href="/assets/js/43.9cee883c.js"><link rel="prefetch" href="/assets/js/44.84b2cd2a.js"><link rel="prefetch" href="/assets/js/45.fe6f3ab3.js"><link rel="prefetch" href="/assets/js/46.6b62dc7e.js"><link rel="prefetch" href="/assets/js/47.0d863e78.js"><link rel="prefetch" href="/assets/js/48.d9c42916.js"><link rel="prefetch" href="/assets/js/49.f5ce6cfb.js"><link rel="prefetch" href="/assets/js/5.bd06905f.js"><link rel="prefetch" href="/assets/js/50.d5a12743.js"><link rel="prefetch" href="/assets/js/51.ea8b5476.js"><link rel="prefetch" href="/assets/js/52.f1e66c06.js"><link rel="prefetch" href="/assets/js/53.502d1750.js"><link rel="prefetch" href="/assets/js/54.0ac32830.js"><link rel="prefetch" href="/assets/js/55.c9b7993f.js"><link rel="prefetch" href="/assets/js/6.bcd7f03d.js"><link rel="prefetch" href="/assets/js/7.8e883dae.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.b873aa2e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c95c5933.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo2.png" alt="Artorius.net" class="logo"> <span class="site-name can-hide">Artorius.net</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/study/index.html" class="nav-link">
+  学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/daily/index.html" class="nav-link">
+  折腾日常
+</a></li><li class="dropdown-item"><!----> <a href="/pages/life/index.html" class="nav-link">
+  杂货铺子
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/artorius-p" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="分类" class="dropdown-title"><span class="title">分类</span> <span class="arrow down"></span></button> <button type="button" aria-label="分类" class="mobile-dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/study/index.html" class="nav-link">
+  学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/pages/daily/index.html" class="nav-link">
+  折腾日常
+</a></li><li class="dropdown-item"><!----> <a href="/pages/life/index.html" class="nav-link">
+  杂货铺子
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/artorius-p" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>使用uv管理Python环境</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/daily/2024-10-18-1.html#临时使用" class="sidebar-link">临时使用</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/pages/daily/2024-10-18-1.html#安装管理python版本" class="sidebar-link">安装管理Python版本</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/pages/daily/2024-10-18-1.html#使用虚拟环境" class="sidebar-link">使用虚拟环境</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/pages/daily/2024-10-18-1.html#在docker中使用" class="sidebar-link">在docker中使用</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="使用uv管理python环境"><a href="#使用uv管理python环境" class="header-anchor">#</a> 使用uv管理Python环境</h1> <p>快，太快了！</p> <h2 id="临时使用"><a href="#临时使用" class="header-anchor">#</a> 临时使用</h2> <p>类似于<code>pipx</code>，使用<code>uvx</code>来临时使用命令</p> <div class="language-shell extra-class"><pre class="language-shell"><code>uvx pycowsay <span class="token string">'hello world!'</span>
+</code></pre></div><p>安装tool：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>uv tool <span class="token function">install</span>
+</code></pre></div><h2 id="安装管理python版本"><a href="#安装管理python版本" class="header-anchor">#</a> 安装管理Python版本</h2> <p>可以直接安装多版本的python（conda可以扔进垃圾桶了）</p> <div class="language-shell extra-class"><pre class="language-shell"><code>uv python <span class="token function">install</span> <span class="token number">3.10</span> <span class="token number">3.11</span> <span class="token number">3.12</span>
+</code></pre></div><p>查看已安装以及可用的Python</p> <div class="language-shell extra-class"><pre class="language-shell"><code>uv python list
+</code></pre></div><h2 id="使用虚拟环境"><a href="#使用虚拟环境" class="header-anchor">#</a> 使用虚拟环境</h2> <p>直接在当前目录创建虚拟环境并安装xxx</p> <div class="language-shell extra-class"><pre class="language-shell"><code>uv venv
+</code></pre></div><p>或者指定python版本</p> <div class="language-shell extra-class"><pre class="language-shell"><code>uv venv <span class="token parameter variable">--python</span> <span class="token number">3.11</span>
+</code></pre></div><p>激活虚拟环境也是跟之前一样的操作</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># *nix环境下</span>
+<span class="token builtin class-name">source</span> .venv/bin/activate
+
+<span class="token comment"># win环境下</span>
+.venv<span class="token punctuation">\</span>Scripts<span class="token punctuation">\</span>activate
+</code></pre></div><p>一般流程是这样的，先初始化项目</p> <div class="language-shell extra-class"><pre class="language-shell"><code>uv init myproject
+</code></pre></div><p>在生成的<code>pyproject.toml</code>中改一下源</p> <div class="language-toml extra-class"><pre class="language-toml"><code><span class="token punctuation">[</span><span class="token table class-name">tool.uv</span><span class="token punctuation">]</span>
+<span class="token key property">index-url</span> <span class="token punctuation">=</span> <span class="token string">&quot;https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple&quot;</span>
+</code></pre></div><p>全局改源要在<code>~/.config/uv/uv.toml</code>中添加，否则<code>uvx</code>（就是uv tool run的alias）不生效</p> <div class="language-toml extra-class"><pre class="language-toml"><code><span class="token key property">index-url</span> <span class="token punctuation">=</span> <span class="token string">&quot;https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple&quot;</span>
+</code></pre></div><p>然后激活虚拟环境，安装需要的包</p> <div class="language-shell extra-class"><pre class="language-shell"><code>uv <span class="token function">add</span> xxx
+</code></pre></div><p>如果要用<code>pip</code>也行</p> <div class="language-shell extra-class"><pre class="language-shell"><code>uv pip <span class="token function">install</span>
+</code></pre></div><p>锁定当前环境直接</p> <div class="language-shell extra-class"><pre class="language-shell"><code>uv lock
+</code></pre></div><p>生成<code>requirements.txt</code></p> <div class="language-shell extra-class"><pre class="language-shell"><code>uv pip compile
+</code></pre></div><p>安装环境所需的文件（类似<code>pip-sync</code>）</p> <div class="language-shell extra-class"><pre class="language-shell"><code>uv pip <span class="token function">sync</span>
+</code></pre></div><h2 id="在docker中使用"><a href="#在docker中使用" class="header-anchor">#</a> 在docker中使用</h2> <p>一个Dockerfile的例子：</p> <div class="language-dockerfile extra-class"><pre class="language-dockerfile"><code><span class="token instruction"><span class="token keyword">FROM</span> python:3.12</span>
+
+<span class="token comment"># 设置工作目录</span>
+<span class="token instruction"><span class="token keyword">WORKDIR</span> /app/</span>
+
+<span class="token comment"># Install uv</span>
+<span class="token comment"># Ref: https://docs.astral.sh/uv/guides/integration/docker/#installing-uv</span>
+<span class="token instruction"><span class="token keyword">COPY</span> <span class="token options"><span class="token property">--from</span><span class="token punctuation">=</span><span class="token string">ghcr.io/astral-sh/uv:0.4.15</span></span> /uv /bin/uv</span>
+
+<span class="token comment"># Place executables in the environment at the front of the path</span>
+<span class="token comment"># Ref: https://docs.astral.sh/uv/guides/integration/docker/#using-the-environment</span>
+<span class="token instruction"><span class="token keyword">ENV</span> PATH=<span class="token string">&quot;/app/.venv/bin:$PATH&quot;</span></span>
+
+<span class="token comment"># Compile bytecode</span>
+<span class="token comment"># Ref: https://docs.astral.sh/uv/guides/integration/docker/#compiling-bytecode</span>
+<span class="token instruction"><span class="token keyword">ENV</span> UV_COMPILE_BYTECODE=1</span>
+
+<span class="token comment"># uv Cache</span>
+<span class="token comment"># Ref: https://docs.astral.sh/uv/guides/integration/docker/#caching</span>
+<span class="token instruction"><span class="token keyword">ENV</span> UV_LINK_MODE=copy</span>
+
+<span class="token comment"># Install dependencies</span>
+<span class="token comment"># Ref: https://docs.astral.sh/uv/guides/integration/docker/#intermediate-layers</span>
+<span class="token instruction"><span class="token keyword">RUN</span> <span class="token options"><span class="token property">--mount</span><span class="token punctuation">=</span><span class="token string">type=cache,target=/root/.cache/uv</span> <span class="token operator">\</span>
+    <span class="token property">--mount</span><span class="token punctuation">=</span><span class="token string">type=bind,source=uv.lock,target=uv.lock</span> <span class="token operator">\</span>
+    <span class="token property">--mount</span><span class="token punctuation">=</span><span class="token string">type=bind,source=pyproject.toml,target=pyproject.toml</span></span> <span class="token operator">\</span>
+    uv sync --frozen --no-install-project</span>
+
+<span class="token instruction"><span class="token keyword">ENV</span> PYTHONPATH=/app</span>
+
+
+<span class="token instruction"><span class="token keyword">COPY</span> ./pyproject.toml ./uv.lock /app/</span>
+
+<span class="token comment"># Sync the project</span>
+<span class="token comment"># Ref: https://docs.astral.sh/uv/guides/integration/docker/#intermediate-layers</span>
+<span class="token instruction"><span class="token keyword">RUN</span> <span class="token options"><span class="token property">--mount</span><span class="token punctuation">=</span><span class="token string">type=cache,target=/root/.cache/uv</span></span> <span class="token operator">\</span>
+    uv sync</span>
+<span class="token comment"># 复制当前目录的内容到容器内</span>
+<span class="token instruction"><span class="token keyword">COPY</span> . .</span>
+
+<span class="token comment"># 运行应用</span>
+<span class="token instruction"><span class="token keyword">CMD</span> [<span class="token string">&quot;uv&quot;</span>, <span class="token string">&quot;run&quot;</span>, <span class="token string">&quot;app.py&quot;</span>]</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.7b9cba93.js" defer></script><script src="/assets/js/2.80ae757c.js" defer></script><script src="/assets/js/1.0ebbda27.js" defer></script><script src="/assets/js/36.51e65fc8.js" defer></script>
+  </body>
+</html>
